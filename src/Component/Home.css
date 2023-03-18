@@ -1,0 +1,36 @@
+.home{
+    height: 40vh;
+    width: 90vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    color: white;
+    position: absolute;
+}
+.homeCon{
+    border: 2px solid black;
+    height: 95vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 35px;
+    background-image: url(https://w0.peakpx.com/wallpaper/248/381/HD-wallpaper-dark-red-color-abstract-background.jpg);
+    background-size: 100% , 100%;
+    filter: blur(6px);
+}
+.home button{
+    width: 10%;
+    height: 13%;
+    background-color: rgba(255, 255, 255, 0);
+    border: 1px solid blue;
+    color: blue;
+    border-radius: 10px;
+}
+.home p{
+    width: 90%;
+    height: 35%;
+   text-align: start;
+}

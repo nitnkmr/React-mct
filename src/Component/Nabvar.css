@@ -1,0 +1,25 @@
+.nav{
+    background-color: black;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 45px;
+    width: 100vw;
+    display: flex;
+}
+.part{
+    width: 65%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.part1{
+    width: 30%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+a{
+    color: aliceblue;
+    text-decoration: none;
+}

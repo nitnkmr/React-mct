@@ -43,6 +43,7 @@
   align-items: center;
   justify-content: center;
 }
+
 .center{
   display: flex;
   align-items: center;
@@ -53,14 +54,14 @@
 
 }
 .container{
-  height: 80%;
-  width: 80%;
-  border: 2px solid black;
+  height: 90vh;
+  width: 90vw;
+  display: flex;
+
 }
 .inner{
   height: 60%;
   width: 60%;
-  border: 2px solid black;
   border-radius: 20px;
   margin-top: 1%;
 
@@ -89,30 +90,99 @@
 }
 
 .header{
-  border: 2px solid black;
   width: 100%;
-  justify-content: space-around;
-  background-color: #282c34;
-  color: white;
+  font-size: 3rem;
+  text-align: start;
+  font-family:Arial, Helvetica, sans-serif;
+  height: 30%;
+  
 }
-.reset{
-  height: 500px;
-  width: 600px;
-  background-color: aqua;
-  border: 8px solid rgb(10, 34, 34);
-  position: absolute;
-  left:100;
+.div{
+  width: 90%;
+  text-align: start;
 }
-input{
-  height: 50px;
-  width: 200px;
-  background-color: #282c34;
-  color: white;
-  font-weight: bolder;
+.bor{
+  border: 2px solid black;
+}
+.right{
+  width: 50%;
+}
+.login{
+  height: 80%;
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.left{
+  width: 50%;
+  background-image: url("https://images.unsplash.com/photo-1675082704413-53bd4ad1637b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8MTB8fHxlbnwwfHx8fA%3D%3D&auto=format&fit=crop&w=500&q=60");
+  background-size: 100%,100%;
+}
+.leftinner{
+  height: 100%;
+  width: 100%;
+  background-image: linear-gradient(to left, rgba(13, 11, 11, 0.459),rgba(247, 45, 45, 0.36),rgba(161, 61, 254, 0.464),rgba(10, 40, 22, 0.514));
+}
+.left img{
+  width: 100%;
+}
+
+.inputs{
+  margin-top: 10px;
+  width: 90%;
+  height: 60%;
+}
+.inputs p{
+  text-align: start;
+  font-size: .8rem;
+}
+.inputs input{
+  width: 90%;
+  height: 30px;
   border: none;
-  margin-top: 20px;
-  border: 20px;
+  background-color: #f2f2f2;
+  margin: 10px;
+  padding: 10px;
+border-radius:5px ;
+
 }
-
-
-
+.radio{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  
+}
+.radio input{
+width: 20px;
+}
+.buttons{
+  height: 15%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.buttons button{
+  border: rgb(247, 63, 94) 2px solid;
+  height: 90%;
+  color: rgb(250, 62, 93);
+  width: 45%;
+  background-color: white;
+  border-radius: 5px;
+}
+.buttons button:hover{
+  border: rgb(247, 63, 94) 2px solid;
+  height: 90%;
+  background-color: rgb(250, 62, 93);
+  width: 45%;
+  color: white;
+  border-radius: 5px;
+}
+span{
+  margin: 10px;
+  color:rgb(241, 43, 159) ;
+}
+.forget p{
+  text-align: center;
+  margin: 10px;
+}

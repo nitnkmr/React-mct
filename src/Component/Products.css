@@ -27,3 +27,6 @@
     color: white;
     border-bottom: .5px solid rgb(39, 37, 37);
 }
+li a{
+    color: blue;
+}

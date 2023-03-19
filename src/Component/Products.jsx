@@ -1,7 +1,8 @@
 import React, { useEffect,useState } from 'react'
+import { Link } from 'react-router-dom';
 import Navbar from './Navbar'
 import "./Products.css"
-const Products = () => {
+const Products = ({detailingHandler}) => {
   const [state, setstate] = useState(true);
   const [caty, setcaty] = useState("electronics");
   const [data, setdata] = useState([]);
@@ -31,7 +32,12 @@ const Products = () => {
         </div>
         <div className="left1 bor">
           <div className="cardLink">
-            {data.map((e,i)=><li key={i}>{e.title}</li>)}
+            {data.map((e,i)=>{
+
+              return(
+            <li key={i} onClick={()=>detailingHandler(e)}><Link to={"/Details"}>{e.title}</Link></li>)
+            })}
+            
           </div>
         </div>
        </div>

@@ -3,7 +3,7 @@ import Navbar from './Navbar'
 import "./User.css"
 
 const User = () => {
-    const [gender, setgender] = useState("")
+    const [gender, setgender] = useState("all")
     const [Udata, setUdata] = useState([])
     function hello(e){
         setgender(e.target.value)
@@ -17,11 +17,15 @@ const User = () => {
     async function getData(){
         const res=await fetch(`https://randomuser.me/api/?results=30`)
         const data= await res.json();
-        setUdata(data);
         console.log(Udata);
-        if(gender.length>1){   
+        if(gender==="male" || gender==="female"){   
         const filtereddata=data.results.filter((e)=>e.gender===gender)
         setUdata(filtereddata);
+    }
+    else if(gender==="all"){
+        setUdata(data.results)
+        console.log(Udata);
+        console.log("elseif");
     }
    
 
@@ -35,7 +39,7 @@ const User = () => {
     Assumenda, illo dolore quos consectetur veniam asperiores ad perferendis, numquam sapiente quibusdam quo fugiat reprehenderit quisquam nemo itaque, sequi a magnam laudantium dicta amet? Quo, ducimus blanditiis. Corporis, reprehenderit atque.
     Ab nostrum dicta aut optio iusto animi lae dignissimos incidunt commodi aliquid nemo, exercitationem autem minus tempora non corporis maxime excepturi corrupti vero blanditiis eveniet dolore quasi possimus distinctio. Perspiciatis.</div>
     <div className="inputsRadio " onChange={(e)=>hello(e)}>
-    <span><input type="radio" name="gender" id="" value="male" defaultChecked />
+    <span><input type="radio" name="gender" id="" value="all" defaultChecked />
         All</span>
         <span>
         <input type="radio" name="gender" value="female" id="" />

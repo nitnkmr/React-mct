@@ -7,6 +7,7 @@ import Products from './Component/Products'
 import Details from './Component/Details'
 import User from './Component/User'
 
+
 const App = () => {
   const [detail, setdetail] = useState({})
 
@@ -18,7 +19,7 @@ const App = () => {
     <div className='App'>
       <div className="center col">
       <Routes>
-        <Route path='/' element={<Login/>}/>
+        <Route path='*' element={<Login/>}/>
         <Route path='/Home' element={<Home/>}/>
         <Route path='/Users' element={<User/>}/>
         <Route path='/Products' element={<Products detailingHandler={detailingHandler}/>}/>

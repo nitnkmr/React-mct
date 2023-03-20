@@ -6,6 +6,7 @@ import Home from './Component/Home'
 import Products from './Component/Products'
 import Details from './Component/Details'
 import User from './Component/User'
+import Contacts from './Component/Contacts'
 
 
 const App = () => {
@@ -24,6 +25,7 @@ const App = () => {
         <Route path='/Users' element={<User/>}/>
         <Route path='/Products' element={<Products detailingHandler={detailingHandler}/>}/>
         <Route path='/Details' element={<Details detail={detail}/>}/>
+        <Route path='/Contacts' element={<Contacts/>}/>
       </Routes>
       </div>
       

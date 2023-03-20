@@ -9,25 +9,10 @@ const Login = () => {
     const [inputs, setInputs] = useState([]);
     const [inputs2, setInput2] = useState("");
     const [inputs1, setInputs1] = useState("");
-    const data = useSelector((state) => state.cart)
-    const dispatch = useDispatch();
     console.log(inputs1);
-    console.log(data);
+    console.log(inputs);
     useEffect(() => {
-
-    }, [inputs1])
-
-    let navigate = useNavigate();
-    const hello = () => {
-        if(data.length>0){
-        data[data.length-1].map((e)=>{
-        
-        if(e.name===(inputs1) && e.password===(inputs2)){
-            setvalid(true)
-        }
-       
-       }
-        )
+        console.log("usee");
         let path = `Home`;
         if(valid){
             navigate(path)
@@ -36,7 +21,28 @@ const Login = () => {
         else{
             console.log("else");
         }
+
+    }, [valid])
+
+    let navigate = useNavigate();
+    const hello = () => {
+        if(inputs.length>0){
+            inputs.map((e)=>{
+        
+        if(e.name===(inputs1) && e.password===(inputs2)){
+            setvalid(true)
+            console.log("hello if");
+        }
+        
     }
+    )
+    
+}
+else{
+    alert("wrong details")
+    console.log("helloelse");
+
+}
 }
     const hello1 = () => {
         
@@ -50,8 +56,11 @@ const Login = () => {
             password: inputs2
 
         }])
-        dispatch(create(str))
+        // dispatch(create(str))
         navigate("/")
+        alert("account created sucsessfully")
+        setInput2("")
+        setInputs1("")
     }
 
 

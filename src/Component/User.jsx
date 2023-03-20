@@ -1,30 +1,36 @@
 import React, { useEffect, useState } from 'react'
+import { useDispatch, useSelector } from 'react-redux'
+import { create } from '../store/slice'
 import Navbar from './Navbar'
 import "./User.css"
-
 const User = () => {
     const [gender, setgender] = useState("all")
-    const [Udata, setUdata] = useState([])
+    const dispatch = useDispatch();
+
+    
+    
+    const dataRecieves = useSelector((state) => state.cart)
+    
     function hello(e){
         setgender(e.target.value)
         console.log(gender);
-        console.log(Udata);
-
+        console.log(dataRecieves.length);
+        console.log(dataRecieves[dataRecieves.length-1]);
+        
     }
     useEffect(()=>{
-      getData();
+        getData();
     },[gender])
     async function getData(){
         const res=await fetch(`https://randomuser.me/api/?results=30`)
         const data= await res.json();
-        console.log(Udata);
         if(gender==="male" || gender==="female"){   
         const filtereddata=data.results.filter((e)=>e.gender===gender)
-        setUdata(filtereddata);
+        dispatch(create(filtereddata))
     }
     else if(gender==="all"){
-        setUdata(data.results)
-        console.log(Udata);
+        dispatch(create(data.results))
+        console.log(dataRecieves);
         console.log("elseif");
     }
    
@@ -56,7 +62,7 @@ const User = () => {
             <div className='gender'>GENDER</div>
         </div>
         <div className="card1 col">
-        {Udata.length>1?(Udata.map((e,i)=>{
+        {dataRecieves.length>0?(dataRecieves[dataRecieves.length-1].map((e,i)=>{
             return(
                 <div className='card' key={i}>
                 <div className='img'>

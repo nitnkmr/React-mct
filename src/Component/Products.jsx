@@ -23,14 +23,14 @@ const Products = ({detailingHandler}) => {
   return (
     <div>
       <Navbar/>
-       <div className="container container1 bor">
-        <div className="right right1 bor">
+       <div className="container container1 ">
+        <div className="right1 " id='right1'>
           <div className="caty" onClick={()=>setcaty("electronics")}>Electronics</div>
           <div className="caty" onClick={()=>setcaty("jewelery")}>Jewelery</div>
           <div className="caty" onClick={()=>setcaty("women's clothing")}>Women's Clothing</div>
           <div className="caty" onClick={()=>setcaty("men's clothing")}>Men's Clothing</div>
         </div>
-        <div className="left1 bor">
+        <div className="left1 ">
           <div className="cardLink">
             {data.map((e,i)=>{
 

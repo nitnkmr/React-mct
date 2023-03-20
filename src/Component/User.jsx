@@ -39,7 +39,7 @@ const User = () => {
   return (
     <>
         <Navbar/>
-    <div className='user container center col '>
+    <div className='user col'>
     <div className="userHead  "><h2>User Details</h2></div>
     <div className="desc ">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium illo delectus odit voluptate enim quas debitis, illum doloribus inventore quo, nam praesentium, iste autem dolor. Tenetur debitis eveniet quia aliquid.
     Assumenda, illo dolore quos consectetur veniam asperiores ad perferendis, numquam sapiente quibusdam quo fugiat reprehenderit quisquam nemo itaque, sequi a magnam laudantium dicta amet? Quo, ducimus blanditiis. Corporis, reprehenderit atque.

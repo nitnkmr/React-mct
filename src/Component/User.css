@@ -1,5 +1,8 @@
 .user{
-    margin-top: 30px;
+    display: flex;
+    height: 100vh;
+    margin-top: 10vh;
+    width: 100vw;
 }
 .userHead{
     height: 7%;
@@ -65,4 +68,9 @@
     margin: 1px;
     border-bottom: 1px solid grey;
     background-color: #e8e5e5;
+}
+@media screen and  (max-width:768px){
+    .desc{
+        font-size: .8rem;
+    }
 }

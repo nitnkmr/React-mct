@@ -23,3 +23,30 @@ a{
     color: aliceblue;
     text-decoration: none;
 }
+#logout{
+    background-color: white;
+    height: 25px;
+    width: 50px;
+    border: none;
+    font-size: 10px;
+}
+#logout a{
+color: rgb(6, 6, 6);
+}
+@media screen and  (max-width:768px){
+    .part1{
+        width: 90%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-size: .6em;
+        margin: 10px;
+    }
+    .part{
+        width: 10%;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        font-size: .6em;
+    }
+}

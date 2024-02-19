@@ -1,6 +1,6 @@
 MCT Project
 ## HOSTED LINK :- https://react-mct.vercel.app/
-TECH USED :- REACT-JS, REDUX
+TECH USED :- REACT-JS, REDUX, JSX, CSS
 
 
 # Summary
